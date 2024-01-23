@@ -1,0 +1,23 @@
+---
+type platform = {
+  name: string;
+  link: string;
+}
+
+const platforms: platform[] = [
+    { name: "SOUNDCLOUD", link: "https://soundcloud.com/vvshawty" },
+    { name: "YOUTUBE", link: "https://youtube.com/@vvshawty" },
+    { name: "YOUTUBE MUSIC", link: "https://music.youtube.com/channel/UCzRDjjsyipW3lEgUKuWWt9w?si=qszRf3CZL_UknWCX" },
+    { name: "SPOTIFY", link: "https://open.spotify.com/intl-pt/artist/7irs4cot51br1gLxkmyFVN?si=T6fzTvLlTBq4Ty21m-EoIw" },
+    { name: "APPLE MUSIC", link: "https://music.apple.com/br/artist/vvshawty/1451070636" },
+    { name: "DEEZER", link: "https://deezer.page.link/fLoLctMJeEvEBXAi6" },
+]
+---
+
+<div class="w-screen">
+    {platforms.map((item) => 
+        <div class="border-white border w-[446px] h-[47px]">
+            <a href={item.link} class="text-white">{item.name}</a>    
+        </div>
+    )}
+</div>
