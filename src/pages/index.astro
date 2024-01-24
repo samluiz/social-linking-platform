@@ -1,14 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import VVSHAWTY from '../components/VVSHAWTY.astro';
+import MainText from '../components/MainText.astro';
 import Platforms from '../components/Platforms.astro';
 ---
 
 <Layout title="VVSHAWTY">
-	<Header />
-	<VVSHAWTY />
-	<Platforms />
+	<MainText />
+	<div class="grid place-items-center w-full">
+		<Platforms />
+	</div>
 </Layout>
 
 <style>

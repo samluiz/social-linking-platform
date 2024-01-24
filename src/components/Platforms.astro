@@ -14,9 +14,9 @@ const platforms: platform[] = [
 ]
 ---
 
-<div class="w-screen">
+<div class="relative">
     {platforms.map((item) => 
-        <div class="border-white border w-[446px] h-[47px]">
+        <div class="border-white border w-[446px] h-[47px] grid place-items-center mt-8">
             <a href={item.link} class="text-white">{item.name}</a>    
         </div>
     )}
