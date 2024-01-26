@@ -27,7 +27,7 @@ function Songs() {
   return (
     <>
     <div className='max-w-[1668px] grid place-items-center p-6'>
-      <h1 className='sm:text-4xl text-2xl text-white border-t-[1px] border-b-[1px] py-2'>TOP TRACKS</h1>
+      <h1 className='sm:text-4xl text-2xl text-white py-2'>TOP TRACKS</h1>
       <Suspense fallback={<p>Loading...</p>}>
         {!tokenLoading && !tracksLoading && tracks && Array.isArray(tracks) ? (
           <TrackList tracks={tracks} />
