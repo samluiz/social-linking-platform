@@ -12,6 +12,9 @@ export default {
 			'black': '#000000'
 		},
 		extend: {
+			backgroundImage: {
+				'noise': "url('noise.svg')"
+			},
 			keyframes: {
 				hover: {
 					'0%': {

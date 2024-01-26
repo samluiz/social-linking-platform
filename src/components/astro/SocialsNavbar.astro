@@ -1,0 +1,11 @@
+---
+import { socials } from "../../utils/types";
+---
+
+<div class="sticky bottom-0 grid place-items-center grid-flow-col bg-noise contrast-100 brightness-100 bg-black bg-no-repeat bg-cover bg-center bg-fixed sm:hidden">
+    {socials.map((item) => 
+        <a href={item.link} class="text-white py-2 grid place-items-center hover:scale-105 duration-200">
+            <Fragment set:html={item.svg} />
+        </a>    
+)}
+</div>

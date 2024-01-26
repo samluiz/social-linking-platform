@@ -14,8 +14,6 @@ export const useSpotifyToken = (): SpotifyTokenHookResult => {
   const client_id = import.meta.env.PUBLIC_SPOTIFY_CLIENT_ID
   const client_secret = import.meta.env.PUBLIC_SPOTIFY_CLIENT_SECRET
 
-  console.log("CLIENT ID: ", client_id)
-
   useEffect(() => {
     const getToken = async () => {
       try {

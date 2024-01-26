@@ -22,6 +22,6 @@ const platforms: Platform[] = [
             item.name === "SPOTIFY" ? bg_color = 'hover:bg-green' :
             item.name === "APPLE MUSIC" ? bg_color = 'hover:bg-pink' :
             item.name === "DEEZER" ? bg_color = 'hover:bg-purple' : bg_color = 'bg-white'
-            return <a target="_blank" href={item.link} class={`text-white border-white border w-[446px] h-[47px] grid place-items-center mt-8 transition duration-200 ${bg_color}`}>{item.name}</a>    
+            return <a target="_blank" href={item.link} class={`text-white border-white border w-[220px] sm:w-[446px] h-[47px] grid place-items-center mt-8 transition duration-200 ${bg_color}`}>{item.name}</a>    
     })}
 </div>

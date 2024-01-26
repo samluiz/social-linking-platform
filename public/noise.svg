@@ -1,4 +1,3 @@
-<!-- svg: first layer -->
 <svg viewBox='0 0 4096 4096' xmlns='http://www.w3.org/2000/svg'>
   <filter id='noiseFilter'>
     <feTurbulence 
@@ -8,5 +7,5 @@
       stitchTiles='stitch'/>
   </filter>
   
-  <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
+  <rect width='100%' height='100%' filter='url(#noiseFilter)' opacity='0.3'/>
 </svg>

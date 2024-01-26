@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { useSpotifyToken } from './hooks/useSpotifyToken';
 import useSpotifyTracks, { type Track } from './hooks/useSpotifyTracks';
 
@@ -11,8 +11,7 @@ const TrackList = ({ tracks }: { tracks: Track[] }) => (
           width="100%"
           height="152"
           title={track.name}
-          style={{ borderRadius: '12px' } as any}
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture; transparency"
           src={track.external_urls.spotify.replace('/open.spotify.com/', '/open.spotify.com/embed/').concat("?utm_source=oembed")}
         />
       </li>
@@ -28,7 +27,7 @@ function Songs() {
   return (
     <>
     <div className='max-w-[1668px] grid place-items-center p-6'>
-      <h1 className='text-4xl text-white border-t-[1px] border-b-[1px] py-2'>TOP TRACKS</h1>
+      <h1 className='sm:text-4xl text-2xl text-white border-t-[1px] border-b-[1px] py-2'>TOP TRACKS</h1>
       <Suspense fallback={<p>Loading...</p>}>
         {!tokenLoading && !tracksLoading && tracks && Array.isArray(tracks) ? (
           <TrackList tracks={tracks} />

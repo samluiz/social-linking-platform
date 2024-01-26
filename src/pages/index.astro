@@ -2,8 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import MainText from '../components/astro/MainText.astro';
 import Platforms from '../components/astro/Platforms.astro';
-import Socials from '../components/astro/Socials.astro';
 import Songs from '../components/react/Songs'
+import SocialsSidebar from '../components/astro/SocialsSidebar.astro';
+import SocialsNavbar from '../components/astro/SocialsNavbar.astro';
 ---
 
 <Layout title="VVSHAWTY">
@@ -11,12 +12,13 @@ import Songs from '../components/react/Songs'
 		<MainText />
 		<div class="grid place-items-center w-full">
 			<Platforms />
-			<Socials />
+			<SocialsSidebar />
 		</div>
 	</main>
 	<div class="w-full grid place-items-center">
 		<Songs client:load />
 	</div>
+	<SocialsNavbar />
 </Layout>
 
 <style>
