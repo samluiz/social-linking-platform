@@ -8,7 +8,8 @@ export default {
 			'green': '#1db954',
 			'pink': '#d80d23',
 			'purple': '#a238ff',
-			'white': '#ffffff'
+			'white': '#ffffff',
+			'black': '#000000'
 		},
 		extend: {
 			keyframes: {

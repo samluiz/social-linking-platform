@@ -1,5 +1,5 @@
 ---
-import Header from '../components/Header.astro';
+import Header from '../components/astro/Header.astro';
 
 interface Props {
 	title: string;
@@ -29,9 +29,23 @@ const { title } = Astro.props;
 		--main-color: #000000;
 		--text-color: #ffffff;
 	}
+	
 	html, body {
 		font-family: 'Krona One', sans-serif;
-		background: var(--main-color);
+		filter: contrast(100%) brightness(100%);
+		color: var(--text-color);
+		background-color: #000000;
+		background-image: url(/noise.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		background-attachment: fixed;
+		-ms-overflow-style: none;  /* Internet Explorer 10+ */
+    	scrollbar-width: none;
 		min-height: 100vh;
+	}
+
+	body::-webkit-scrollbar {
+		display: none;
 	}
 </style>
