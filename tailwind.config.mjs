@@ -2,7 +2,35 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		colors: {
+			'orange': '#ff5500',
+			'red': '#ff0000',
+			'green': '#1db954',
+			'pink': '#d80d23',
+			'purple': '#a238ff',
+			'white': '#ffffff'
+		},
+		extend: {
+			keyframes: {
+				hover: {
+					'0%': {
+						transform: 'translate(0, 0)'
+					  },
+					  '25%': {
+						transform: 'translate(5px, 5px)'
+					  },
+					  '50%': {
+						transform: 'translate(0, 0)'
+					  },
+					  '75%': {
+						transform: 'translate(-5px, -5px'
+					  },
+					  '100%': {
+						transform: 'translate(0, 0)'
+					  },
+				}
+			}
+		},
 	},
 	plugins: [],
 }

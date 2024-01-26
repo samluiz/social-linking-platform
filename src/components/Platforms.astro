@@ -1,23 +1,27 @@
 ---
-type platform = {
+type Platform = {
   name: string;
   link: string;
 }
 
-const platforms: platform[] = [
+const platforms: Platform[] = [
     { name: "SOUNDCLOUD", link: "https://soundcloud.com/vvshawty" },
     { name: "YOUTUBE", link: "https://youtube.com/@vvshawty" },
-    { name: "YOUTUBE MUSIC", link: "https://music.youtube.com/channel/UCzRDjjsyipW3lEgUKuWWt9w?si=qszRf3CZL_UknWCX" },
     { name: "SPOTIFY", link: "https://open.spotify.com/intl-pt/artist/7irs4cot51br1gLxkmyFVN?si=T6fzTvLlTBq4Ty21m-EoIw" },
+    { name: "YOUTUBE MUSIC", link: "https://music.youtube.com/channel/UCzRDjjsyipW3lEgUKuWWt9w?si=qszRf3CZL_UknWCX" },
     { name: "APPLE MUSIC", link: "https://music.apple.com/br/artist/vvshawty/1451070636" },
     { name: "DEEZER", link: "https://deezer.page.link/fLoLctMJeEvEBXAi6" },
 ]
 ---
 
 <div class="relative">
-    {platforms.map((item) => 
-        <div class="border-white border w-[446px] h-[47px] grid place-items-center mt-8">
-            <a href={item.link} class="text-white">{item.name}</a>    
-        </div>
-    )}
+    {platforms.map((item) => {
+        let bg_color = ''
+        item.name === "SOUNDCLOUD" ? bg_color = 'hover:bg-orange' :
+            item.name.includes("YOUTUBE") ? bg_color = 'hover:bg-red' :
+            item.name === "SPOTIFY" ? bg_color = 'hover:bg-green' :
+            item.name === "APPLE MUSIC" ? bg_color = 'hover:bg-pink' :
+            item.name === "DEEZER" ? bg_color = 'hover:bg-purple' : bg_color = 'bg-white'
+            return <a target="_blank" href={item.link} class={`text-white border-white border w-[446px] h-[47px] grid place-items-center mt-8 transition duration-200 ${bg_color}`}>{item.name}</a>    
+    })}
 </div>
