@@ -44,6 +44,10 @@ const { title } = Astro.props;
     	scrollbar-width: none;
 		min-height: 100vh;
 		min-width: 100vw;
+
+		@media (max-width: 768px) {
+			background-image: none;
+		}
 	}
 
 	body::-webkit-scrollbar {
